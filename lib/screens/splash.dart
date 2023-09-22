@@ -9,23 +9,8 @@ import 'package:my_profile/utlity/pref_manager.dart';
 
 import 'login_screen.dart';
 
-class Splash extends StatefulWidget {
+class Splash extends StatelessWidget {
   const Splash({Key? key}) : super(key: key);
-
-  @override
-  State<Splash> createState() => _SplashState();
-}
-
-class _SplashState extends State<Splash> {
-  late Timer timer;
-
-  @override
-  void initState() {
-    super.initState();
-    navigate();
-  }
-
-  Future<void> navigate() async {}
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +37,13 @@ class _SplashState extends State<Splash> {
                 });
               },
               builder: (controller) {
-                return Text('My Profile');
+                return Text(
+                  'My Profile',
+                  style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold),
+                );
               }),
         ),
       ),
